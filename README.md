@@ -17,3 +17,12 @@ How to create menu using KNPMENUBUNDLE
     composer req --dev maker 
     composer req twig
     composer req annotations
+	
+## generate new HomeController
+    php bin/console make:controller Home
+	
+## change Route
+	from
+		* @Route("/home", name="home"
+	to 
+		* @Route("/", name="home"
