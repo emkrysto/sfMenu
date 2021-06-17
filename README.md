@@ -11,3 +11,9 @@ How to create menu using KNPMENUBUNDLE
 
 ## start the server in the background
     symfony server:start -d
+
+## install require bundles
+    composer req knplabs/knp-menu-bundle
+    composer req --dev maker 
+    composer req twig
+    composer req annotations
