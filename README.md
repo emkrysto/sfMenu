@@ -63,3 +63,16 @@ How to create menu using KNPMENUBUNDLE
             return $menu; 
         } 
     }
+
+## add bellow code to congig\sevices.yaml
+
+    app.menu_builder: 
+        class: App\Menu\Builder 
+        arguments: ["@knp_menu.factory"] 
+ 
+    app.main_menu: 
+        class: Knp\Menu\MenuItem 
+        factory: ["@app.menu_builder", mainMenu] 
+        arguments: ["@request_stack"] 
+        tags: 
+            - { name: knp_menu.menu, alias: navigator }
