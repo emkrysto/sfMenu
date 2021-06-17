@@ -64,7 +64,7 @@ How to create menu using KNPMENUBUNDLE
         } 
     }
 
-## add bellow code to congig\sevices.yaml
+## add bellow code to config\sevices.yaml
 
     app.menu_builder: 
         class: App\Menu\Builder 
@@ -76,3 +76,12 @@ How to create menu using KNPMENUBUNDLE
         arguments: ["@request_stack"] 
         tags: 
             - { name: knp_menu.menu, alias: navigator }
+
+## add knp_menu_render line to templates\base.html.twig
+    <body>
+        {{ knp_menu_render('navigator') }}
+        {% block body %}{% endblock %}
+    </body>
+	
+## open menu page
+    symfony open:local
