@@ -26,7 +26,7 @@ How to create menu using KNPMENUBUNDLE
     to 
     * @Route("/", name="home"
 
-## make and go to a new directory
+## create and go to a new directory
     md src\Menu 
     cd src\Menu
 
